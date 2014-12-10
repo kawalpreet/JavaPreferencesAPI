@@ -19,7 +19,7 @@ public class Input {
 
 		case "car":
 
-			if (prefs.getBoolean("isWorth", true)) {
+			if (!prefs.getBoolean("isWorth", true)) {
 				System.out
 						.println(prefs.get("ID", "Hello World")
 								+ " is not worth ,plz buy some good bike and for your info car is "
@@ -27,9 +27,9 @@ public class Input {
 
 			} else {
 				System.out
-				.println(prefs.get("ID", "Hello World")
-						+ " is not worth ,plz buy some good bike and for your info car is "
-						+ prefs.getInt("type", 4) + " wheeler");
+						.println(prefs.get("ID", "Hello World")
+								+ " is not worth ,plz buy some good bike and for your info car is "
+								+ prefs.getInt("type", 4) + " wheeler");
 				System.out.println("plz select bike only");
 				System.out
 						.println("after the user selection  value of pref -->  "
@@ -39,7 +39,7 @@ public class Input {
 								+ prefs.getInt("type", 4));
 				System.out
 						.println("after the user selection  value of pref for is worth (true/false) -->  "
-								+ prefs.getBoolean("isWorth", true));
+								+ prefs.getBoolean("isWorth", false));
 			}
 			break;
 		case "bike":
@@ -51,6 +51,15 @@ public class Input {
 				System.out
 						.println("bike is  worth ,your decision is best for your info bike is "
 								+ prefs.getInt("type", 4) + " wheeler");
+				System.out
+						.println("after the user selection  value of pref -->  "
+								+ prefs.get("ID", "Hello World!!"));
+				System.out
+						.println("after the user selection  value of pref for type (wheels) -->  "
+								+ prefs.getInt("type", 4));
+				System.out
+						.println("after the user selection  value of pref for is worth (true/false) -->  "
+								+ prefs.getBoolean("isWorth", true));
 			} else {
 				System.out.println("again wrong decision");
 			}

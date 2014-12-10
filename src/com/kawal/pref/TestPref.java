@@ -27,8 +27,7 @@ public class TestPref {
 		String input = scan.next();
 		if (input.equalsIgnoreCase("car") || input.equalsIgnoreCase("bike")) {
 			prefs.put("ID", input);
-			System.out.println("after the user selection value of pref is --> "
-					+ prefs.get("ID", "Hello World"));
+			
 			obj.printOUt();
 		} else {
 			System.out.println("plz type car or bike only");
